@@ -13,6 +13,15 @@ This app manages GitHub Grass and encourages your commits.
 
 - iOS
 
+## Functions
+
+- Commit goal setting.
+- Annual commit graph.
+- Commit competition with friend.
+- Grade according to annual commit.
+- Differentiated profile cards depending on your grade.
+- Commit notification to achieve 1commit a day.
+
 ## App Store Download
 
 <a href="https://apps.apple.com/kr/app/초록잔디/id1602956399" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
