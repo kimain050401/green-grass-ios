@@ -11,7 +11,7 @@ This app manages GitHub Grass and encourages your commits.
 
 ## Preview
 
-<img src="https://github.com/kimain050401/green-grass-ios/preview.PNG" alt="Green Grass Preview">
+![Preview](preview.PNG)
 
 ## Supported Platform
 
