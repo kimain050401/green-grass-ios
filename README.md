@@ -17,6 +17,8 @@ This app manages GitHub Grass and encourages your commits.
 ## Supported Platform
 
 - iOS
+- iPadOS
+- MacOS (only Apple Silicon)
 
 ## Functions
 
