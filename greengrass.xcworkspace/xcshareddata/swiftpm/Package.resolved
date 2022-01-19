@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Charts",
+        "repositoryURL": "https://github.com/spacenation/swiftui-charts.git",
+        "state": {
+          "branch": "master",
+          "revision": "a24e51a9db161ba96e8af69bfc010f4fbf44be7e",
+          "version": null
+        }
+      },
+      {
+        "package": "Shapes",
+        "repositoryURL": "https://github.com/spacenation/swiftui-shapes.git",
+        "state": {
+          "branch": null,
+          "revision": "c58b15c37eae9bd20525c6daa93a06a689ca75cb",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "URLImage",
+        "repositoryURL": "https://github.com/dmytro-anokhin/url-image",
+        "state": {
+          "branch": "main",
+          "revision": "20abda498bf8fe78631b1057b77078147598962b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
