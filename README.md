@@ -9,6 +9,10 @@ GitHub Gardener? Start with Green Grass!
 
 This app manages GitHub Grass and encourages your commits.
 
+## Preview
+
+<img src="https://github.com/kimain050401/green-grass-ios/preview.PNG" alt="Green Grass Preview">
+
 ## Supported Platform
 
 - iOS
