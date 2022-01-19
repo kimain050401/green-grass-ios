@@ -4,7 +4,7 @@
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Swift 5.0](https://img.shields.io/badge/license-GPL--3.0-lightgrey?style=flat)](https://github.com/kimain050401/green-grass-ios/blob/main/LICENSE)
 
-## Introdution
+## Introduction
 
 GitHub Gardener? Start with Green Grass!
 
