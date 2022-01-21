@@ -44,7 +44,7 @@ struct GradeView: View {
     @Binding var commitCountMinValue: Int
     @Binding var commitUserCountMaxValue: Int
     @Binding var commitUserCountMinValue: Int
-    @Binding var progressValue: Float
+    @Binding var progressCommitDayValue: Float
     @Binding var todayCommit: Int
     @Binding var todayFriendCommit: Int
     @Binding var todayUserCommit: Int
@@ -88,6 +88,10 @@ struct GradeView: View {
     @Binding var position: Int
     @Binding var randomNumber: Int
     @Binding var pushAlertShow: Bool
+    @Binding var commitMaintain: Int
+    @Binding var progressCommitMaintainValue: Float
+    @Binding var commitMaintainCheerTextRandomNumber: Int
+    @Binding var commitMaintainCheerText: [String]
     var body: some View {
         ZStack{
             Color.Background

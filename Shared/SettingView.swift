@@ -44,7 +44,7 @@ struct SettingView: View {
     @Binding var commitCountMinValue: Int
     @Binding var commitUserCountMaxValue: Int
     @Binding var commitUserCountMinValue: Int
-    @Binding var progressValue: Float
+    @Binding var progressCommitDayValue: Float
     @Binding var todayCommit: Int
     @Binding var todayFriendCommit: Int
     @Binding var todayUserCommit: Int
@@ -88,6 +88,10 @@ struct SettingView: View {
     @Binding var position: Int
     @Binding var randomNumber: Int
     @Binding var pushAlertShow: Bool
+    @Binding var commitMaintain: Int
+    @Binding var progressCommitMaintainValue: Float
+    @Binding var commitMaintainCheerTextRandomNumber: Int
+    @Binding var commitMaintainCheerText: [String]
     var body: some View {
         ZStack{
             Color.Background
@@ -357,23 +361,6 @@ struct SettingView: View {
                         .background(Color.ContentBoxBackground)
                         .cornerRadius(15)
                         .padding(.bottom)
-                        HStack{
-                            Text("문의하기")
-                                .font(Font.body.weight(.bold))
-                            Spacer()
-                            Button(action: {
-                                urlString = "https://green-grass.tech/support"
-                                showSafari = true
-                            }, label: {
-                                Text("문의 사이트")
-                                    .font(Font.body.weight(.regular))
-                                    .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
-                            })
-                        }
-                        .padding()
-                        .background(Color.ContentBoxBackground)
-                        .cornerRadius(15)
-                        .padding(.bottom)
                         VStack{
                             HStack{
                                 Text("기타")
@@ -383,23 +370,15 @@ struct SettingView: View {
                                     urlString = "https://green-grass.tech/support"
                                     showSafari = true
                                 }, label: {
-                                    Text("개발자 GitHub")
+                                    Text("문의하기")
                                         .font(Font.body.weight(.regular))
                                         .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
                                 })
                                 Text("|")
-                                Button(action: {
-                                    urlString = "https://green-grass.tech/support"
-                                    showSafari = true
-                                }, label: {
-                                    Text("초록잔디 Repository")
-                                        .font(Font.body.weight(.regular))
-                                        .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
-                                })
+                                Link("오픈소스", destination: URL(string: "https://green-grass.tech/open_source")!)
+                                Text("|")
+                                Link("개발자 정보", destination: URL(string: "https://green-grass.tech/dev_info")!)
                             }
-                            Text("초록잔디는 오픈소스입니다.")
-                                .foregroundColor(Color.gray)
-                                .padding(.top, 4)
                         }
                         .padding()
                         .background(Color.ContentBoxBackground)

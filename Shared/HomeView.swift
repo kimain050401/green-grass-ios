@@ -44,7 +44,7 @@ struct HomeView: View {
     @Binding var commitCountMinValue: Int
     @Binding var commitUserCountMaxValue: Int
     @Binding var commitUserCountMinValue: Int
-    @Binding var progressValue: Float
+    @Binding var progressCommitDayValue: Float
     @Binding var todayCommit: Int
     @Binding var todayFriendCommit: Int
     @Binding var todayUserCommit: Int
@@ -88,6 +88,10 @@ struct HomeView: View {
     @Binding var position: Int
     @Binding var randomNumber: Int
     @Binding var pushAlertShow: Bool
+    @Binding var commitMaintain: Int
+    @Binding var progressCommitMaintainValue: Float
+    @Binding var commitMaintainCheerTextRandomNumber: Int
+    @Binding var commitMaintainCheerText: [String]
     var body: some View {
         ZStack{
             Color.Background
@@ -193,7 +197,7 @@ struct HomeView: View {
                         }
                         HStack{
                             Text(ContentView().addComma(value: todayCommit) + "개")
-                            ProgressBar(value: $progressValue).frame(height: 10)
+                            ProgressBar(value: $progressCommitDayValue).frame(height: 10)
                             Text(ContentView().addComma(value: Int(userGoal)!) + "개")
                         }
                         HStack{
@@ -212,6 +216,34 @@ struct HomeView: View {
                                         .foregroundColor(Color.gray)
                                 }
                             })
+                        }
+                    }
+                    .padding()
+                    .background(Color.ContentBoxBackground)
+                    .cornerRadius(15)
+                    .padding(.horizontal)
+                    .padding(.bottom)
+                    
+                    VStack(alignment: .leading){
+                        HStack{
+                            Text("1일 1커밋")
+                                .bold()
+                                .padding(.bottom, 2)
+                            Spacer()
+                        }
+                        HStack{
+                            Spacer()
+                            VStack{
+                                HStack(spacing: 0){
+                                    Text(ContentView().addComma(value: commitMaintain) + "일")
+                                        .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
+                                        .bold()
+                                    Text(" 동안 1일 1커밋 연속 달성 중!")
+                                        .bold()
+                                }
+                                Text(commitMaintainCheerText[commitMaintainCheerTextRandomNumber])
+                            }
+                            Spacer()
                         }
                     }
                     .padding()
