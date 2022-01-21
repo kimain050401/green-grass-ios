@@ -1,6 +1,6 @@
 # Green Grass 🌿
 
-[![Releases](https://img.shields.io/badge/release-v1.2-blue?style=flat)](https://github.com/kimain050401/green-grass-ios)
+[![Releases](https://img.shields.io/badge/release-v1.2-blue?style=flat)](https://github.com/kimain050401/green-grass-ios/releases/latest)
 [![Platform](https://img.shields.io/badge/platform-iOS-green.svg?style=flat)](https://github.com/kimain050401/green-grass-ios)
 [![Swift 5.5](https://img.shields.io/badge/Swift-5.5-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![GPL 3.0 License](https://img.shields.io/badge/license-GPL--3.0-lightgrey?style=flat)](https://github.com/kimain050401/green-grass-ios/blob/main/LICENSE)
