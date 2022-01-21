@@ -358,17 +358,48 @@ struct SettingView: View {
                         .cornerRadius(15)
                         .padding(.bottom)
                         HStack{
-                            Text("기타")
+                            Text("문의하기")
                                 .font(Font.body.weight(.bold))
                             Spacer()
                             Button(action: {
                                 urlString = "https://green-grass.tech/support"
                                 showSafari = true
                             }, label: {
-                                Text("문의하기")
+                                Text("문의 사이트")
                                     .font(Font.body.weight(.regular))
                                     .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
                             })
+                        }
+                        .padding()
+                        .background(Color.ContentBoxBackground)
+                        .cornerRadius(15)
+                        .padding(.bottom)
+                        VStack{
+                            HStack{
+                                Text("기타")
+                                    .font(Font.body.weight(.bold))
+                                Spacer()
+                                Button(action: {
+                                    urlString = "https://green-grass.tech/support"
+                                    showSafari = true
+                                }, label: {
+                                    Text("개발자 GitHub")
+                                        .font(Font.body.weight(.regular))
+                                        .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
+                                })
+                                Text("|")
+                                Button(action: {
+                                    urlString = "https://green-grass.tech/support"
+                                    showSafari = true
+                                }, label: {
+                                    Text("초록잔디 Repository")
+                                        .font(Font.body.weight(.regular))
+                                        .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
+                                })
+                            }
+                            Text("초록잔디는 오픈소스입니다.")
+                                .foregroundColor(Color.gray)
+                                .padding(.top, 4)
                         }
                         .padding()
                         .background(Color.ContentBoxBackground)
