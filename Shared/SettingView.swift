@@ -129,6 +129,9 @@ struct SettingView: View {
                                         if(ContentView().internetTest() == true){
                                             ContentView().getGithubContributions(isAll: true)
                                         }
+                                        self.alertTitle = "프로필 정보 새로고침됨"
+                                        self.alertBody = "프로필 정보(프사, 팔로워, 팔로잉)가 새로고침되어 프로필 정보가 업데이트되었습니다."
+                                        self.showingAlert = true
                                     }
                                 }, label: {
                                     if showSaveButton1 == false{
@@ -182,6 +185,9 @@ struct SettingView: View {
                                         if(ContentView().internetTest() == true){
                                             ContentView().getGithubContributions(isAll: true)
                                         }
+                                        self.alertTitle = "프로필 정보 새로고침됨"
+                                        self.alertBody = "프로필 정보(프사, 팔로워, 팔로잉)가 새로고침되어 프로필 정보가 업데이트되었습니다."
+                                        self.showingAlert = true
                                     }
                                 }, label: {
                                     if showSaveButton2 == false{
@@ -350,6 +356,9 @@ struct SettingView: View {
                                     if(ContentView().internetTest() == true){
                                         ContentView().getGithubContributions(isAll: true)
                                     }
+                                    self.alertTitle = "프로필 정보 새로고침됨"
+                                    self.alertBody = "프로필 정보(프사, 팔로워, 팔로잉)가 새로고침되어 프로필 정보가 업데이트되었습니다."
+                                    self.showingAlert = true
                                 }, label: {
                                     Image(systemName: "arrow.clockwise")
                                         .font(Font.body.weight(.bold))
@@ -375,8 +384,10 @@ struct SettingView: View {
                                         .foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
                                 })
                                 Text("|")
+                                    .foregroundColor(Color.gray)
                                 Link("오픈소스", destination: URL(string: "https://green-grass.tech/open_source")!)
                                 Text("|")
+                                    .foregroundColor(Color.gray)
                                 Link("개발자 정보", destination: URL(string: "https://green-grass.tech/dev_info")!)
                             }
                         }

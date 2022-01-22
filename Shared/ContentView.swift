@@ -259,7 +259,7 @@ struct ContentView: View {
                 .accentColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))
             }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text(alertTitle), message: Text(alertBody), dismissButton: .default(Text("확인").foregroundColor(Color(red: 82 / 255, green: 164 / 255, blue: 80 / 255))))
+                Alert(title: Text(alertTitle), message: Text(alertBody), dismissButton: .default(Text("확인")))
             }
             .sheet(isPresented: $showSafari) {
                 SafariView(url:URL(string: urlString)!)
@@ -373,7 +373,11 @@ struct ContentView: View {
                 mainInfoText2 = addComma(value: Int(contributionCount)!) + "일 동안의 " + addComma(value: commitCount) + "개의 커밋을 찾음"
                 contributionCountDay = contributionCount
                 contributionCount = String(commitCount)
-                commitMaintain = Int(contributionCountDay)! - commitCountArr.lastIndex(of: 0)! - 1
+                if commitCountArr.lastIndex(of: 0) != nil{
+                    commitMaintain = Int(contributionCountDay)! - commitCountArr.lastIndex(of: 0)! - 1
+                } else{
+                    commitMaintain = 0
+                }
                 progressCommitDayValue = Float(Float(non_filtered_commitCountArr[non_filtered_commitCountArr.count - 1]) / Float(userGoal)!)
                 progressCommitMaintainValue = Float(Float(commitMaintain) / Float(365))
                 todayCommit = non_filtered_commitCountArr[non_filtered_commitCountArr.count - 1]
@@ -432,11 +436,6 @@ struct ContentView: View {
                 formatter_time.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 refreshTime = formatter_time.string(from: Date()) + "에 커밋 정보가 업데이트됨"
                 loading = false
-                if isAll == true{
-                    alertTitle = "프로필 정보 새로고침됨"
-                    alertBody = "프로필 정보(프사, 팔로워, 팔로잉)가 새로고침되어 프로필 정보가 업데이트되었습니다."
-                    showingAlert = true
-                }
             case .failure(let error):
                 print("❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥❤️‍🔥\(error)")
                 if(error.responseCode == nil){
