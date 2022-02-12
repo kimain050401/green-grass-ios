@@ -34,6 +34,11 @@ This app manages GitHub Grass and encourages your commits.
 
 <a href="https://apps.apple.com/kr/app/초록잔디/id1602956399" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 250px; height: 83px;"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp" alt="Download on the App Store" style="border-radius: 13px; width: 250px; height: 83px;"></a>
 
+## Known Error
+
+- 1Day 1Commit numbering error
+- Can't refresh profile infos
+
 ## License
 
 Green Grass is available under the `GNU General Public License v3.0`.
