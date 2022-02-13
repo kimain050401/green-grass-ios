@@ -36,8 +36,8 @@ This app manages GitHub Grass and encourages your commits.
 
 ## Known Error
 
-- 1Day 1Commit numbering error
-- Can't refresh profile infos
+- [ ] 1Day 1Commit numbering error
+- [ ] Can't refresh profile infos
 
 ## License
 
